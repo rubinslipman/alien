@@ -1,10 +1,10 @@
 ---
-title: Solo Trip to Sevile
+title: Seville trip
 date: 2026-09-12
 summary: A few days in the city.
 ---
 
-This is my Seville trip plan.
+# This is my Seville trip plan.
 
 
 Day 1: Wednesday 
