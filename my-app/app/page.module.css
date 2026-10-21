@@ -1,13 +1,13 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
+  --background: var(--ctp-mocha-crust);
+  --foreground: var(--ctp-mocha-base);
 
-  --text-primary: #000;
-  --text-secondary: #666;
+  --text-primary: var(--ctp-mocha-text);
+  --text-secondary: var(--ctp-mocha-subtext0);
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
+  --button-primary-hover: var(--ctp-mocha-surface1);
+  --button-secondary-hover: var(--ctp-mocha-surface0);
+  --button-secondary-border: var(--ctp-mocha-overlay0);
 
   display: flex;
   flex: 1;
@@ -36,6 +36,12 @@
   align-items: flex-start;
   text-align: left;
   gap: 24px;
+  padding: 24px;
+  color: var(--ctp-mocha-text);
+  background: var(--ctp-mocha-surface0);
+  border: 1px solid var(--ctp-mocha-red);
+  border-left: 6px solid var(--ctp-mocha-peach);
+  box-shadow: 8px 8px 0 var(--ctp-mocha-crust);
 }
 
 .intro h1 {
@@ -45,7 +51,6 @@
   line-height: 48px;
   letter-spacing: -2.4px;
   text-wrap: balance;
-  color: var(--text-primary);
 }
 
 .intro p {
@@ -58,7 +63,11 @@
 
 .intro a {
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--ctp-mocha-green);
+}
+
+.intro nav a {
+  color: var(--ctp-mocha-blue);
 }
 
 .ctas {
@@ -129,15 +138,15 @@ a.secondary {
   }
 
   .page {
-    --background: #000;
-    --foreground: #000;
+    --background: var(--ctp-mocha-crust);
+    --foreground: var(--ctp-mocha-base);
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+    --text-primary: var(--ctp-mocha-text);
+    --text-secondary: var(--ctp-mocha-subtext0);
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+    --button-primary-hover: var(--ctp-mocha-surface1);
+    --button-secondary-hover: var(--ctp-mocha-surface0);
+    --button-secondary-border: var(--ctp-mocha-overlay0);
   }
 }
 

@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import { BlogPost } from './types'
-import { parseMarkdown } from "./helpers";
+import { BlogPost } from '../types'
+import { parseMarkdown } from "../helpers";
 
 function getPosts(): BlogPost[] {
   const postsDirectory = path.join(process.cwd(), "app", "blog", "posts");
@@ -26,7 +26,7 @@ export default function Page() {
     <main>
       <section>
         <div>
-          <h1>Travel Journal</h1>
+          <h1 >Travel Journal</h1>
           <p>Notes from the Road</p>
           <p>Field stories about slow mornings, open roads, and the places that change the pace of a day.</p>
         </div>
