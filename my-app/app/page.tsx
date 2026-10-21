@@ -28,7 +28,7 @@ export default function Home() {
       <main>
         <div>
           <h1 className="mt-2 mb-4">
-            Personal Journal of Nigelus Thornberry
+            Personal Journal of Phineus Nigellus
           </h1>
           <div className="max-w-lg mt-2 mb-2 flex flex-col gap-2">
 
