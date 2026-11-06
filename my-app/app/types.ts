@@ -4,4 +4,5 @@ export type BlogPost = {
   summary: string;
   slug: string;
   content: string;
+  tags: string;
 };

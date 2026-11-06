@@ -2,6 +2,7 @@
 title: Favourite books of 2026
 date: 2026-09-17
 summary: Some books that I read in 2026
+tags: reading
 ---
 
 ## Fourth Wing

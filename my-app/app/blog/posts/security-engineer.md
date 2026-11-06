@@ -1,7 +1,8 @@
 ---
 title: Dream of being a security engineer
 date: 2026-10-24
-summary: 
+summary:
+tags: security
 ---
 
 I always wanted to be a security engineer but ended up going into software engineer. 

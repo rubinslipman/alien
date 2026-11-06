@@ -13,6 +13,7 @@ export function parseMarkdown(filePath: string): BlogPost {
       summary: "A travel note from the road.",
       slug: path.basename(filePath, ".md"),
       content: raw,
+      tags: raw
     };
   }
 
@@ -36,5 +37,6 @@ export function parseMarkdown(filePath: string): BlogPost {
     summary: metadata.summary ?? "A travel note from the road.",
     slug: path.basename(filePath, ".md"),
     content,
+    tags: metadata.tags ?? ''
   };
 }

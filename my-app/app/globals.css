@@ -1,3 +1,4 @@
 @import "./theme.css";
 @import "tailwindcss";
 @import "@catppuccin/tailwindcss/mocha.css";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
