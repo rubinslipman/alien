@@ -28,6 +28,8 @@ export default async function Page({
           ))}
         </div>
       </article>
+
+        <h2>Explore Related Stories</h2>
     </main>
   );
 }

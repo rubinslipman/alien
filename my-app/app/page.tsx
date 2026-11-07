@@ -2,7 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { BlogPost } from './types'
 import { parseMarkdown } from "./helpers";
-import { ThemeToggle } from "./components/themeToggle";
+import { ThemeToggle } from "./components/themeToggle"; 
+import TagList from "./components/tagList";
+import PostList from "./components/postList";
 
 function getPosts(): BlogPost[] {
   const postsDirectory = path.join(process.cwd(), "app", "blog", "posts");
@@ -21,14 +23,16 @@ function getPosts(): BlogPost[] {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-// function filterPosts(): BlogPost[] {
-  
-//   return posts;
-// }
+function filterPosts(posts: BlogPost[], filter: string): BlogPost[] {
+  const result = posts.filter((post) => post.tags === filter);
+  return result
+}
+
 export default function Home() {
   const posts = getPosts();
+
   return (
-      <div>
+     
             <main>
               <div>
                 <div className="mt-2 mb-4">
@@ -57,32 +61,11 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h2>Tags</h2>
-                  <ul className="flex flex-row gap-2">
-                        {posts.map((post) => (
-                          <li key={post.slug}>
-                              <button
-                                className="border rounded p-1">
-                                  {post.tags}
-                              </button>
-                          </li>
-                        ))}
-                      </ul>
-                  <h2 className="text-lg">Blog posts</h2>
-                    <ul className="flex flex-col gap-2">
-                      {posts.map((post) => (
-                        <li key={post.slug}>
-                          <article className="flex flex-row gap-2">
-                            / <a href={`/blog/${post.slug}`} className="text-ctp-teal-500">{post.title}</a>
-                            <time dateTime={post.date} className="text-ctp-lavender-400">{post.date}</time>
-                          | {post.tags}
-                          </article>
-                        </li>
-                      ))}
-                    </ul>
+                  <TagList posts={posts} />
+                  <PostList posts={posts} />
                 </div>
               </div>
             </main>
-          </div>
+       
   );
 }
