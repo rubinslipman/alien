@@ -1,4 +1,3 @@
-'use client'
 import { BlogPost } from "../types";
 import Tag from "./tag";
 

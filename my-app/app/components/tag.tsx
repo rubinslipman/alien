@@ -1,11 +1,10 @@
 'use client'
 import { useState } from "react";
 import Image from 'next/image'
-export default function Tag({name}) {
+
+export default function Tag({ name }: { name:string }) {
     const [active, setActive] = useState(false)
-
     function handleOnClick() {
-
         if (active == false) {
             setActive(true);
         } else {
